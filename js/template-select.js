@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const resume = JSON.parse(localStorage.getItem("resume"));
+  // ✅ Always initialize resume safely
+  let resume = JSON.parse(localStorage.getItem("resume")) || {};
+
   const container = document.getElementById("templateContainer");
 
-  // Safety check
-  if (!resume || !resume.department) {
+  // ✅ Safety check
+  if (!resume.department) {
     alert("Please select a department first");
     window.location.href = "templates.html";
     return;
@@ -14,6 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const templates = departmentTemplates[dept];
 
   container.innerHTML = "";
+
+  if (!templates || templates.length === 0) {
+    container.innerHTML = "<p>No templates available</p>";
+    return;
+  }
 
   templates.forEach(template => {
 
@@ -30,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
     card.appendChild(img);
     card.appendChild(title);
 
-    card.onclick = () => {
+    card.addEventListener("click", () => {
       resume.template = template;
       localStorage.setItem("resume", JSON.stringify(resume));
 
       // ✅ NEXT STEP
       window.location.href = "create.html";
-    };
+    });
 
     container.appendChild(card);
   });
