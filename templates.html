@@ -52,7 +52,7 @@
         This helps us customize templates for your profession
       </p>
 
-      <select id="departmentSelect" name="department" required>
+      <select id="departmentSelect" required>
         <option value="" disabled selected>Select a department</option>
         <option value="medical">Medical</option>
         <option value="software">Software</option>
@@ -64,16 +64,15 @@
         You can change this later while editing your resume.
       </p>
 
-     <button class="next-btn" id="continueBtn">Continue →</button>
-
+      <button class="next-btn" id="continueBtn">Continue →</button>
 
     </div>
 
   </div>
-   <script src="js/auth.js"></script>
-   <script src="js/templates.js"></script>
-   <script src="js/data.js"></script>
+
+  <!-- ✅ SCRIPT ORDER IS VERY IMPORTANT -->
+  <script src="js/data.js"></script>
+  <script src="js/templates.js"></script>
 
 </body>
 </html>
-
