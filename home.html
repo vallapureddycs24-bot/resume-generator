@@ -86,8 +86,9 @@
 
 <script>
 function logout() {
-  localStorage.clear();
-  window.location.replace("login.html");
+  localStorage.removeItem("token");
+  localStorage.removeItem("resume");
+  window.location.href = "login.html";
 }
 
 function startFresh() {
