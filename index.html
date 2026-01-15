@@ -10,7 +10,7 @@
 <!-- 🔐 LOGIN PROTECTION -->
 <script>
   if (!localStorage.getItem("token")) {
-    window.location.href = "login.html";
+    window.location.replace("login.html");
   }
 </script>
 
@@ -32,7 +32,7 @@
   </a>
 </section>
 
-<!-- SLIDER (3 IMAGES) -->
+<!-- SLIDER -->
 <section class="slider">
   <div class="slides">
     <img src="assets/images/ind1.jpg" alt="Resume sample">
@@ -77,10 +77,6 @@
   <a href="templates.html" class="cta-btn" onclick="startFresh()">
     Land your dream job now
   </a>
-
-  <span class="paper p1">📄</span>
-  <span class="paper p2">📃</span>
-  <span class="paper p3">📑</span>
 </section>
 
 <!-- FOOTER -->
@@ -90,9 +86,8 @@
 
 <script>
 function logout() {
-  localStorage.removeItem("token");
-  localStorage.removeItem("resume");
-  window.location.href = "login.html";
+  localStorage.clear();
+  window.location.replace("login.html");
 }
 
 function startFresh() {
