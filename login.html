@@ -37,17 +37,8 @@
   </div>
 </div>
 
-<script>
-document.getElementById("loginForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  // simple demo login
-  localStorage.clear();
-  localStorage.setItem("token", "logged_in");
-
-  window.location.replace("index.html");
-});
-</script>
+<!-- ✅ USE AUTH.JS ONLY -->
+<script src="js/auth.js"></script>
 
 </body>
 </html>
