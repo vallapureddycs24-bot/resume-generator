@@ -1,0 +1,575 @@
+/* =========================
+   BASE LAYOUT
+========================= */
+body {
+  background: #f4f6f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#resume {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+}
+
+.resume {
+  width: 100%;
+  line-height: 1.6;
+}
+
+img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+/* =========================
+   COMMON HEADING STYLES
+========================= */
+.resume h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.resume h3 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 5px solid #0a66c2;
+  color: #0a66c2;
+}
+
+/* =========================
+   ASIDE (SIDE COLUMN) HEADINGS
+========================= */
+.resume aside h3 {
+  background: #0a66c2;
+  color: white;
+  padding: 6px 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border-left: none;
+  border-radius: 4px;
+}
+
+/* =========================
+   LIST STYLES
+========================= */
+.resume ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.resume li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   SOFTWARE TEMPLATE 1
+========================= */
+.soft1-header {
+  background: #0b3c5d;
+  color: white;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.soft1-header h1 {
+  color: white;
+}
+
+.soft1-header img {
+  width: 90px;
+  border-radius: 6px;
+}
+
+.soft1-body {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.soft1 aside {
+  background: #f3f3f3;
+  padding: 20px;
+}
+
+.soft1 main {
+  padding: 20px;
+}
+
+/* =========================
+   SOFTWARE TEMPLATE 2
+========================= */
+.soft2 header {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.soft2 img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.soft2 section {
+  padding-top: 20px;
+}
+
+/* =========================
+   SOFTWARE TEMPLATE 3
+========================= */
+.soft3 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.soft3 aside {
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+}
+
+.soft3 aside h3 {
+  background: #ffffff;
+  color: #1e1e1e;
+}
+
+.soft3 aside img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.soft3 main {
+  padding: 30px;
+}
+
+/* =========================
+   MEDICAL TEMPLATE 1
+========================= */
+.med1 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background: #ffe6ec;
+}
+
+.med1 aside {
+  padding: 25px;
+  background: #ffd1dc;
+}
+
+.med1 h3 {
+  border-left-color: rgb(232, 91, 192);
+  color: darkgreen;
+}
+
+.med1 aside h3 {
+  background: rgb(213, 82, 159);
+  color: white;
+}
+
+/* =========================
+   MEDICAL TEMPLATE 2
+========================= */
+.med2 {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.med2 aside {
+  background: #2e86de;
+  color: white;
+  padding: 25px;
+}
+
+.med2 aside img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.med2 aside h3 {
+  background: white;
+  color: #2e86de;
+}
+
+.med2 main {
+  padding: 30px;
+}
+
+/* MEDICAL ICON TOP */
+.medical-icon {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.medical-icon i {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  background: #1f8bd6;
+  color: white;
+  width: 35%;
+  padding: 30px 20px;
+}
+
+/* PROFILE PIC */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px auto 20px;
+  border: 4px solid #ffffff;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* MAIN RESUME CONTAINER */
+.resume.medical.med2 {
+  display: flex;
+  align-items: stretch;   /* 🔥 IMPORTANT */
+  min-height: 100%;
+}
+
+/* LEFT BLUE PANEL */
+.left-panel {
+  background: #1f8bd6;
+  width: 35%;
+  color: white;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  width: 65%;
+  padding: 30px;
+}
+
+/* ENSURE BOTH PANELS MATCH HEIGHT */
+.left-panel,
+.right-panel {
+  min-height: 100%;
+}
+
+
+
+/* =========================
+   MEDICAL TEMPLATE 3
+========================= */
+.med3 header {
+  background: #0b3c5d;
+  color: white;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.med3 header h1 {
+  color: white;
+}
+
+.med3 header img {
+  width: 90px;
+  border-radius: 6px;
+}
+
+.med3-body {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.med3-body aside {
+  background: #f3f3f3;
+  padding: 20px;
+}
+
+.med3-body main {
+  padding: 25px;
+}
+
+
+
+/* =========================
+   MANAGEMENT TEMPLATE 1
+========================= */
+.man1 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.man1 aside {
+  background: #f1f1f1;
+  padding: 25px;
+}
+
+.man1 aside img {
+  width: 120px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.man1 h3 {
+  border-left-color: #5b2c6f;
+  color: #5b2c6f;
+}
+
+.man1 aside h3 {
+  background: #5b2c6f;
+  color: white;
+}
+
+/* =========================
+   MANAGEMENT TEMPLATE 2
+========================= */
+.man2 header {
+  background: #2f3338;
+  color: white;
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+}
+
+.man2 header h1 {
+  color: white;
+}
+
+.man2 header img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.man2-body {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.man2-body aside {
+  background: #f4efe9;
+  padding: 25px;
+}
+
+.man2-body main {
+  padding: 30px;
+}
+
+/* =========================
+   GENERAL TEMPLATE
+========================= */
+.gen1 {
+  max-width: 850px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+}
+
+.gen1 header {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.gen1 header img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.gen1 section {
+  padding-top: 20px;
+}
+
+.gen1 h3 {
+  border-left-color: #333;
+  color: #333;
+}
+
+/* =========================
+   PRINT / PDF SETTINGS
+========================= */
+@media print {
+  body {
+    background: white !important;
+  }
+
+  button {
+    display: none;
+  }
+
+  #resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0;
+    padding: 20mm;
+    box-shadow: none;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
+/* REMOVE BULLET DOTS FOR CLINICAL DETAILS (ALL MEDICAL TEMPLATES) */
+.resume.medical .clinical-list {
+  list-style: none;      /* removes dots */
+  padding-left: 0;       /* removes left gap */
+  margin-left: 0;
+}
+
+.resume.medical .clinical-list li {
+  padding-left: 0;
+}
+/* REMOVE DOTS ONLY FOR CLINICAL DETAILS - ALL MEDICAL TEMPLATES */
+.resume.medical section ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.resume.medical section ul li {
+  padding-left: 0 !important;
+}
+.resume p {
+  white-space: pre-line;
+  line-height: 1.5;
+}
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+  min-height: 100vh;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: linear-gradient(135deg, #0a66c2, #0052cc);
+  color: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.preview-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+button {
+  border: none;
+  padding: 12px 22px;
+  font-size: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.back-btn {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.download-btn {
+  background: white;
+  color: #0a66c2;
+}
+
+.download-btn:hover {
+  background: #e3f2fd;
+}
+
+/* ===============================
+   MAIN PREVIEW AREA
+================================ */
+.preview-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+/* ===============================
+   RESUME CARD
+================================ */
+.resume-wrapper {
+  background: #f7f9fc;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  max-width: 950px;
+  width: 100%;
+}
+
+/* Resume itself */
+#resume {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   PRINT (PDF)
+================================ */
+@media print {
+  body {
+    background: white;
+  }
+
+  .preview-header {
+    display: none;
+  }
+
+  .resume-wrapper {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  #resume {
+    box-shadow: none;
+    padding: 0;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Resume Builder</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- 🔐 LOGIN PROTECTION -->
+<script>
+  if (!localStorage.getItem("token")) {
+    window.location.href = "login.html";
+  }
+</script>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <h2>Resume Builder</h2>
+  <div>
+    <a href="templates.html" class="btn" onclick="startFresh()">Create Resume</a>
+    <button class="btn logout" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Create Stunning Resumes</h1>
+  <p>Designed to impress recruiters. Built for your career.</p>
+  <a href="templates.html" class="btn large glow" onclick="startFresh()">
+    Build My Resume
+  </a>
+</section>
+
+<!-- SLIDER (3 IMAGES) -->
+<section class="slider">
+  <div class="slides">
+    <img src="assets/images/ind1.jpg" alt="Resume sample">
+    <img src="assets/images/ind2.jpg" alt="Resume sample">
+    <img src="assets/images/ind3.jpg" alt="Resume sample">
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="card glass">
+    <h3>🎨 Multiple Templates</h3>
+    <p>Department-wise resume templates designed by professionals.</p>
+  </div>
+  <div class="card glass">
+    <h3>⚡ Live Preview</h3>
+    <p>See your resume update instantly as you type.</p>
+  </div>
+  <div class="card glass">
+    <h3>📥 Download Ready</h3>
+    <p>Download job-ready resumes in one click.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <h2>💬 What Users Say</h2>
+  <div class="review-box">
+    ⭐⭐⭐⭐⭐ <br>
+    “Got shortlisted within a week using this resume!”
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="promo">
+  <span class="close">×</span>
+  <h1>Get noticed, get hired faster</h1>
+  <p>
+    If you want a better job, start with a standout resume.
+    Create yours now to get a step closer to your next big opportunity.
+  </p>
+  <a href="templates.html" class="cta-btn" onclick="startFresh()">
+    Land your dream job now
+  </a>
+
+  <span class="paper p1">📄</span>
+  <span class="paper p2">📃</span>
+  <span class="paper p3">📑</span>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>🚀 Resume Builder | HTML • CSS • JavaScript</p>
+</footer>
+
+<script>
+function logout() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("resume");
+  window.location.href = "login.html";
+}
+
+function startFresh() {
+  localStorage.removeItem("resume");
+}
+
+document.querySelector(".promo .close")?.addEventListener("click", () => {
+  document.querySelector(".promo").style.display = "none";
+});
+</script>
+
+</body>
+</html>

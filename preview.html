@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Preview</title>
+  <link rel="stylesheet" href="css/resume.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="preview-header">
+    <h1>Resume Preview</h1>
+    <div class="actions">
+      <button class="back-btn" onclick="history.back()">← Back</button>
+      <button class="download-btn" onclick="window.print()">⬇ Download PDF</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="preview-container">
+
+    <!-- RESUME PREVIEW -->
+    <div class="resume-wrapper">
+      <div id="resume"></div>
+    </div>
+
+  </main>
+
+  <!-- STEP MARK -->
+  <script>
+    document.querySelectorAll(".step")[3]?.classList.add("active");
+  </script>
+
+  <!-- ORDER IS IMPORTANT -->
+  <script src="js/data.js"></script>
+  <script src="js/preview.js"></script>
+
+</body>
+</html>

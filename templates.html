@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <title>Select Department | Resume Builder</title>
+  <link rel="stylesheet" href="css/templates.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- LEFT HERO -->
+    <div class="hero-left">
+      <h1>
+        Build Your <span>Perfect Resume</span>
+      </h1>
+      <p>
+        Select your career domain to get professionally designed
+        resume templates tailored to your industry.
+      </p>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="selection-card">
+
+      <!-- STEPPER -->
+      <div class="stepper">
+        <div class="step active">
+          <strong>1</strong>
+          <span>Department</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+          <strong>2</strong>
+          <span>Template</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+          <strong>3</strong>
+          <span>Details</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+          <strong>4</strong>
+          <span>Preview</span>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <h2>🏷 Select Your Department</h2>
+      <p class="subtitle">
+        This helps us customize templates for your profession
+      </p>
+
+      <select id="departmentSelect" name="department" required>
+        <option value="" disabled selected>Select a department</option>
+        <option value="medical">Medical</option>
+        <option value="software">Software</option>
+        <option value="management">Management</option>
+        <option value="others">Others</option>
+      </select>
+
+      <p class="hint">
+        You can change this later while editing your resume.
+      </p>
+
+     <button class="next-btn" id="continueBtn">Continue →</button>
+
+
+    </div>
+
+  </div>
+   <script src="js/auth.js"></script>
+   <script src="js/templates.js"></script>
+   <script src="js/data.js"></script>
+
+</body>
+</html>
+

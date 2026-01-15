@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Resume</title>
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+<!-- 🔐 LOGIN PROTECTION -->
+<script>
+  const r = JSON.parse(localStorage.getItem("resume"));
+  if (!r || !r.department || !r.template) {
+    window.location.href = "templates.html";
+  }
+</script>
+
+
+<div class="builder">
+
+  <!-- LEFT : FORM PANEL -->
+  <div class="form-panel">
+    <div class="page">
+
+      <h1>Create Your Resume</h1>
+      <p class="subtitle">
+        Selected Template: <b id="templateName"></b>
+      </p>
+
+      <form id="resumeForm" class="resume-form">
+
+        <!-- 👤 PERSONAL INFO -->
+        <div class="card">
+          <h2>👤 Personal Information</h2>
+
+          <label>Upload Photo</label>
+          <input type="file" id="photo" accept="image/*">
+
+          <input id="name" placeholder="Full Name" required>
+          <input id="email" placeholder="Email">
+          <input id="phone" placeholder="Phone">
+          <input id="location" placeholder="Location">
+        </div>
+
+        <!-- 💼 PROFESSIONAL -->
+        <div class="card">
+          <h2>💼 Professional Summary</h2>
+
+          <label>Department</label>
+          <select id="department" disabled>
+            <option value="software">Software</option>
+            <option value="medical">Medical</option>
+            <option value="management">Management</option>
+            <option value="others">Others</option>
+          </select>
+
+          <textarea id="summary"
+            placeholder="Write your professional summary here (Shift + Enter for new line)">
+          </textarea>
+        </div>
+
+        <!-- 🌐 LANGUAGES -->
+        <div class="card">
+          <h2>🌐 Languages</h2>
+          <div id="languages"></div>
+          <button type="button" class="add-btn" onclick="addLanguage()">+ Add Language</button>
+        </div>
+
+        <!-- 🎯 HOBBIES -->
+        <div class="card">
+          <h2>🎯 Hobbies</h2>
+          <div id="hobbies"></div>
+          <button type="button" class="add-btn" onclick="addHobby()">+ Add Hobby</button>
+        </div>
+
+        <!-- 🎓 EDUCATION -->
+        <div class="card section" id="edu-section" style="display:none">
+          <h2>🎓 Education</h2>
+          <div id="education-container"></div>
+          <button type="button" class="add-btn" onclick="addEducation()">+ Add Education</button>
+        </div>
+
+        <!-- 📜 CERTIFICATES -->
+        <div class="card section" id="cert-section" style="display:none">
+          <h2>📜 Certificates</h2>
+          <div id="certificate-container"></div>
+          <button type="button" class="add-btn" onclick="addCertificate()">+ Add Certificate</button>
+        </div>
+
+        <!-- 🏢 EXPERIENCE -->
+        <div class="card section" id="exp-section" style="display:none">
+          <h2>🏢 Experience</h2>
+          <div id="experience-container"></div>
+          <button type="button" class="add-btn" onclick="addExperience()">+ Add Experience</button>
+        </div>
+
+        <!-- 🛠 PROJECTS -->
+        <div class="card section" id="proj-section" style="display:none">
+          <h2>🛠 Projects</h2>
+          <div id="project-container"></div>
+          <button type="button" class="add-btn" onclick="addProject()">+ Add Project</button>
+        </div>
+
+        <!-- ⭐ SKILLS -->
+        <div class="card">
+          <h2>⭐ Skills</h2>
+          <div id="skills"></div>
+          <button type="button" class="add-btn" onclick="addSkill()">+ Add Skill</button>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-box">
+          <button type="submit" class="primary-btn">
+            Final Preview →
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- RIGHT : LIVE PREVIEW PANEL -->
+  <div class="preview-panel">
+    <h2 class="preview-title">Live Resume Preview</h2>
+    <div id="livePreview"></div>
+  </div>
+
+</div>
+
+
+<!-- JS (ORDER MATTERS) -->
+<script src="js/data.js"></script>
+<script src="js/form.js"></script>
+
+<script>
+  const r2 = JSON.parse(localStorage.getItem("resume"));
+  document.getElementById("templateName").innerText = r2.template.toUpperCase();
+  document.getElementById("department").value = r2.department;
+</script>
+
+</body>
+</html>
