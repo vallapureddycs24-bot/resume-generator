@@ -18,25 +18,23 @@ if (loginForm) {
     }
 
     // ✅ FAKE LOGIN SUCCESS
+    localStorage.clear();
     localStorage.setItem("token", "logged_in");
-
-    // optional: store email
     localStorage.setItem("userEmail", email);
 
-    // ✅ GO TO HOME PAGE
-    window.location.href = "home.html";
+    // ✅ REDIRECT
+    window.location.replace("index.html");
   });
 }
 
 /* ======================
-   SIGNUP (OPTIONAL DUMMY)
+   SIGNUP (DUMMY)
 ====================== */
 const signupForm = document.getElementById("signupForm");
 
 if (signupForm) {
   signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
     alert("Account created successfully. Please login.");
     window.location.href = "login.html";
   });
